@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  caffe:
+    image: bvlc/caffe:cpu
+    volumes:
+      - ./models/bvlc_googlenet/bvlc_googlenet.caffemodel:/opt/caffe/models/bvlc_googlenet/bvlc_googlenet.caffemodel
+      - ./scripts:/workspace/scripts
+      - ./input:/workspace/input
+      - ./output:/workspace/output
